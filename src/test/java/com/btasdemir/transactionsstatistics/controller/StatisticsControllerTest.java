@@ -36,7 +36,7 @@ public class StatisticsControllerTest {
         statisticsResponse.setSum("5");
         statisticsResponse.setCount(4L);
 
-        given(statisticsService.getStatistics()).willReturn(statisticsResponse);
+        given(statisticsService.calculateStatistics()).willReturn(statisticsResponse);
 
         //When
         ResultActions result = mockMvc.perform(get("/statistics"));

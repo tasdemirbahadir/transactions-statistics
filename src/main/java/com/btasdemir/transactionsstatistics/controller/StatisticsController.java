@@ -18,7 +18,7 @@ public class StatisticsController {
 
     @GetMapping
     public StatisticsResponse getStatistics() {
-        return statisticsService.getStatistics();
+        return statisticsService.calculateStatistics();
     }
 
 }

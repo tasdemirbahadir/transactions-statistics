@@ -33,7 +33,7 @@ public class StatisticsServiceTest {
     private SummaryStatisticsToStatisticsResponseConverter converter;
 
     @Test
-    public void it_should_get_statistics_correctly() {
+    public void it_should_calculate_statistics_correctly() {
         //Given
         Stream<BigDecimal> notStaledTransactionsAmountsStream = Arrays.asList(new BigDecimal("10.00"),
                 new BigDecimal("20.00")).stream();
@@ -47,7 +47,7 @@ public class StatisticsServiceTest {
         given(converter.convert(any(BigDecimalSummaryStatistics.class))).willReturn(statisticsResponse);
 
         //When
-        StatisticsResponse retrievedStatistics = statisticsService.getStatistics();
+        StatisticsResponse retrievedStatistics = statisticsService.calculateStatistics();
 
         //Then
         assertThat(retrievedStatistics).isEqualTo(statisticsResponse);

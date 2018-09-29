@@ -18,7 +18,7 @@ public class StatisticsService {
         this.converter = converter;
     }
 
-    public StatisticsResponse getStatistics() {
+    public StatisticsResponse calculateStatistics() {
         return converter.convert(transactionService.getNotStaledTransactionsAmountsStreamAndDiscardRest()
                 .collect(BigDecimalSummaryStatistics.collect()));
     }
