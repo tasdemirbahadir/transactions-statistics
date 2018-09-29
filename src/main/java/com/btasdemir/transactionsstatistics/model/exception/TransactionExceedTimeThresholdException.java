@@ -1,0 +1,4 @@
+package com.btasdemir.transactionsstatistics.model.exception;
+
+public class TransactionExceedTimeThresholdException extends TransactionsStatisticsApplicationException {
+}
