@@ -1,6 +1,5 @@
 package com.btasdemir.transactionsstatistics.controller;
 
-import com.btasdemir.transactionsstatistics.configuration.SchedulerConfiguration;
 import com.btasdemir.transactionsstatistics.converter.TransactionRequestToTransactionConverter;
 import com.btasdemir.transactionsstatistics.model.request.TransactionRequest;
 import com.btasdemir.transactionsstatistics.service.TransactionService;
@@ -31,8 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         GlobalControllerExceptionHandler.class,
         DateTimeUtils.class,
         DecimalUtils.class,
-        TransactionRequestToTransactionConverter.class,
-        SchedulerConfiguration.class})
+        TransactionRequestToTransactionConverter.class})
 public class TransactionControllerIT {
 
     @Autowired
